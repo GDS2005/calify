@@ -1,3 +1,5 @@
+import Form from "./components/Form"
+
 function App() {
 
   return (
@@ -16,26 +18,7 @@ function App() {
       <div className="container mx-auto p-6">
         <section id="form" className="mb-12">
           <h2 className="text-2xl font-bold text-lime-600 mb-4">Carga de Datos</h2>
-          <form className="bg-white p-6 rounded-lg shadow-md space-y-4">
-            <div>
-              <label className="block font-medium mb-1">Tipo de registro:</label>
-              <select id="tipo" className="w-full p-2 border border-gray-300 rounded">
-                <option value="caloria">Calorías Consumidas</option>
-                <option value="ejercicio">Ejercicio Realizado</option>
-              </select>
-            </div>
-            <div>
-              <label className="block font-medium mb-1">Descripción:</label>
-              <input type="text" id="descripcion" className="w-full p-2 border border-gray-300 rounded"/>
-            </div>
-            <div>
-              <label className="block font-medium mb-1">Cantidad (kcal):</label>
-              <input type="number" id="cantidad" className="w-full p-2 border border-gray-300 rounded"/>
-            </div>
-            <button type="submit" className="bg-lime-500 hover:bg-lime-600 text-white font-semibold py-2 px-4 rounded">
-              Guardar
-            </button>
-          </form>
+          <Form />
         </section>
 
         <section id="resumen" className="w-full mb-12 bg-lime-50 p-6">
