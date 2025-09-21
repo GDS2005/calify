@@ -1,6 +1,12 @@
+import { useReducer } from "react"
+import { activityReducer, initialState } from "./reducers/activityReducer"
 import Form from "./components/Form"
 
 function App() {
+
+  const [state, dispatch] = useReducer(activityReducer, initialState)
+
+  console.log(state)
 
   return (
     <>
@@ -18,7 +24,9 @@ function App() {
       <div className="container mx-auto p-6">
         <section id="form" className="mb-12">
           <h2 className="text-2xl font-bold text-lime-600 mb-4">Carga de Datos</h2>
-          <Form />
+          <Form 
+            dispatch={dispatch}
+          />
         </section>
 
         <section id="resumen" className="w-full mb-12 bg-lime-50 p-6">
